@@ -21,7 +21,7 @@ input:
   - github_status_url
 
 vars:
-  - webui_base_url: "https://st2cicd.uswest2.stackstorm.net"
+  - webui_base_url: "https://st2cicd.uswest2.coditation.net"
   - notify_channels:
       - '#thunderdome'
   - notify_failure_channels:

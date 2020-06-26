@@ -1,7 +1,7 @@
 ---
 name: mistral_st2_master
 pack: st2ci
-description: Run integration tests using StackStorm's Mistral fork
+description: Run integration tests using Coditation's Mistral fork
 enabled: true
 trigger:
     type: githubwebhook.github_event
@@ -10,7 +10,7 @@ criteria:
         pattern: refs/heads/master
         type: equals
     trigger.body.repository.full_name:
-        pattern: StackStorm/st2
+        pattern: Coditation/st2
         type: equals
 action:
     ref: st2ci.mistral

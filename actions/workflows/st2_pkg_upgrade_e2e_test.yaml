@@ -23,7 +23,7 @@ input:
   - debug
 vars:
   - result: ""
-  - webui_base_url: http://st2cicd.uswest2.stackstorm.net
+  - webui_base_url: http://st2cicd.uswest2.coditation.net
   - vm_fqdn: <% ctx().hostname %>.<% ctx().dns_zone %>
   - vm_info:
   - vm_id:
@@ -34,7 +34,7 @@ vars:
       distro:
       versions:
       version_str: not installed
-  - bootstrap_script_url: <% coalesce( ctx().bootstrap_script, "https://raw.githubusercontent.com/StackStorm/st2-packages/" + ctx().bootstrap_branch + "/scripts/st2_bootstrap.sh") %>
+  - bootstrap_script_url: <% coalesce( ctx().bootstrap_script, "https://raw.githubusercontent.com/Coditation/st2-packages/" + ctx().bootstrap_branch + "/scripts/st2_bootstrap.sh") %>
   - st2_username: st2admin
   - st2_password: Ch@ngeMe
   - destroy_vm_iteration_count: 0

@@ -26,8 +26,8 @@ fi
 
 if [ ${SHORT_VERSION} = "2.4" ] && [ ${ENTERPRISE} -eq 1 ]; then
     echo "Upgrading dependencies for 2.4 enterprise"
-    sudo /opt/stackstorm/st2/bin/pip install \
-        --find-links /opt/stackstorm/share/wheels --no-index --quiet \
+    sudo /opt/coditation/st2/bin/pip install \
+        --find-links /opt/coditation/share/wheels --no-index --quiet \
         --upgrade st2-enterprise-auth-backend-ldap
     exit 0
 fi

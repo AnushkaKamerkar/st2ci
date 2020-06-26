@@ -12,7 +12,7 @@ parameters:
   dns_zone:
     type: string
     description: Route53 DNS Zone to add host to
-    default: uswest2.stackstorm.net
+    default: uswest2.coditation.net
   instance_type:
     type: string
     # There is no AMI which supports new C5 instance size for those distros

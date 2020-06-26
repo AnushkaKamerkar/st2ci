@@ -28,7 +28,7 @@ input:
       - '#thunderdome'
       - '#opstown'
 vars:
-  - webui_base_url: https://st2cicd.uswest2.stackstorm.net
+  - webui_base_url: https://st2cicd.uswest2.coditation.net
 output:
   - versions: <% dict(st2 => ctx().promoted_st2,
                       st2chatops => ctx().promoted_st2chatops,
@@ -60,7 +60,7 @@ tasks:
   promote_all:
     next:
       - do:
-          # Due to bug https://github.com/StackStorm/orquesta/issues/112,
+          # Due to bug https://github.com/Coditation/orquesta/issues/112,
           # these tasks do not properly join to process_completion when run
           # in parallel, so we run them sequential.
           - promote_st2

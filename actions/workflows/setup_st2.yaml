@@ -1,6 +1,6 @@
 ---
 version: '1.0'
-description: Setup a running instance of StackStorm from git repo.
+description: Setup a running instance of Coditation from git repo.
 input:
   - host
   - repo

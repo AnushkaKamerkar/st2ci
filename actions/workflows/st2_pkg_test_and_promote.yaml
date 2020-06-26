@@ -32,7 +32,7 @@ input:
 
 vars:
   - versions: ""
-  - webui_base_url: https://st2cicd.uswest2.stackstorm.net
+  - webui_base_url: https://st2cicd.uswest2.coditation.net
   - pkg_distro_version: <% ctx().distro_to_distro_version_map.get(ctx().distro) %>
 
 output:

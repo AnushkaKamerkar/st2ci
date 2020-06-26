@@ -1,6 +1,6 @@
 ---
 version: '1.0'
-description: Teardown a running instance of StackStorm.
+description: Teardown a running instance of Coditation.
 input:
   - host
   - repo
@@ -26,7 +26,7 @@ tasks:
     action: core.remote_sudo
     input:
       hosts: <% ctx().host %>
-      cmd: rm -rf /opt/stackstorm/packs
+      cmd: rm -rf /opt/coditation/packs
     next:
       - when: <% succeeded() %>
         do:

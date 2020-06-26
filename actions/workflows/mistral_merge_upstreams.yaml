@@ -10,7 +10,7 @@ tasks:
     input:
       hosts: <% ctx().host %>
       name: mistral
-      repo: git@github.com:stackstorm/mistral.git
+      repo: git@github.com:coditation/mistral.git
       repo_upstream: git@github.com:openstack/mistral.git
       commit_sha: <% ctx().shas.get(mistral) %>
     next:
@@ -22,6 +22,6 @@ tasks:
     input:
       hosts: <% ctx().host %>
       name: python-mistralclient
-      repo: git@github.com:stackstorm/python-mistralclient.git
+      repo: git@github.com:coditation/python-mistralclient.git
       repo_upstream: git@github.com:openstack/python-mistralclient.git
       commit_sha: <% ctx().shas.get(mistralclient) %>

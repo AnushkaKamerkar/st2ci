@@ -36,17 +36,17 @@ vars:
       distro:
       versions:
       version_str: not installed
-  - bootstrap_script_url: <% coalesce(ctx().bootstrap_script, "https://raw.githubusercontent.com/StackStorm/st2-packages/" + ctx().bootstrap_branch + "/scripts/st2_bootstrap.sh") %>
+  - bootstrap_script_url: <% coalesce(ctx().bootstrap_script, "https://raw.githubusercontent.com/Coditation/st2-packages/" + ctx().bootstrap_branch + "/scripts/st2_bootstrap.sh") %>
   - bootstrap_script_arg_dev_or_ver: <%
       switch(
         ctx().dev_build => "dev=" + ctx().dev_build,
         not ctx().dev_build => "version=" + coalesce(ctx().version, '')) %> 
   - st2_username: st2admin
   - st2_password: Ch@ngeMe
-  - github_status_org: StackStorm
+  - github_status_org: Coditation
   - github_status_repo: st2
   - github_status_context: st2/e2e/<% ctx().distro.toLower() %><% ctx().enterprise and '-enterprise' or '' %>
-  - github_status_url: https://buildstatus.stackstorm.org/execution/<% ctx().st2.action_execution_id %>
+  - github_status_url: https://buildstatus.coditation.org/execution/<% ctx().st2.action_execution_id %>
   - failed: False
 
 output:

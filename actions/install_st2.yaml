@@ -1,7 +1,7 @@
 ---
   name: "install_st2"
   runner_type: "remote-shell-script"
-  description: "Install StackStorm and related components."
+  description: "Install Coditation and related components."
   enabled: true
   entry_point: "install_st2.sh"
   parameters:

@@ -1,6 +1,6 @@
 ---
 version: '1.0'
-description: Promote a StackStorm package from staging to production repo
+description: Promote a Coditation package from staging to production repo
 input:
   - package
   - release
@@ -18,8 +18,8 @@ input:
       el: rpm
       ubuntu: deb
 vars:
-  - prd_repo: StackStorm/<% ctx().release %>
-  - stg_repo: StackStorm/staging-<% ctx().release %>
+  - prd_repo: Coditation/<% ctx().release %>
+  - stg_repo: Coditation/staging-<% ctx().release %>
   - arch: <% ctx().distro_arch_map.get(ctx().distro_version.split("/")[0]) %>
   - package_type: <% ctx().distro_pkg_type_map.get(ctx().distro_version.split("/")[0]) %>
   - packagecloud_api_url: <% "https://" + ctx().api_token + ":@packagecloud.io"  %>

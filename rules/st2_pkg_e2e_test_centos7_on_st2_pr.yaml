@@ -1,6 +1,6 @@
 ---
 name: st2_pkg_e2e_test_centos7_on_st2_pr
-description: Run CentOS7 end-to-end test on 'StackStorm/st2' PRs and update GitHub status
+description: Run CentOS7 end-to-end test on 'Coditation/st2' PRs and update GitHub status
 pack: st2ci
 enabled: true
 
@@ -10,7 +10,7 @@ trigger:
 criteria:
     trigger.body.payload.vcs_url:
         type: equals
-        pattern: "https://github.com/StackStorm/st2"
+        pattern: "https://github.com/Coditation/st2"
     # branch not starting with 'master' or 'vX.Y'
     trigger.body.payload.branch:
         type: regex

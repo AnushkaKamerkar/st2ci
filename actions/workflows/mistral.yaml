@@ -28,7 +28,7 @@ input:
       - '#thunderdome'
       - '#opstown'
 vars:
-  - webui_base_url: https://st2cicd.uswest2.stackstorm.net
+  - webui_base_url: https://st2cicd.uswest2.coditation.net
   - hosts: null
   - shas: null
   - deps: null
@@ -119,7 +119,7 @@ tasks:
           - shas: <% result().output.shas %>
         do:
           - merge_upstreams
-      - when: <% succeeded() and (not ctx().merge_upstream or ctx().mis_repo_base = stackstorm) %>
+      - when: <% succeeded() and (not ctx().merge_upstream or ctx().mis_repo_base = coditation) %>
         publish:
           - shas: <% result().output.shas %>
         do:

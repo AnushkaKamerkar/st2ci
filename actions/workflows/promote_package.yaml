@@ -54,7 +54,7 @@ tasks:
   download_trusty:
     action: core.local
     input:
-      cmd: wget -O /tmp/st2-up/ubuntu/trusty/<% ctx().deb %> https://packagecloud.io/StackStorm/<% ctx().source %>/ubuntu/pool/trusty/main/<% ctx().package.substring(0,1) %>/<% ctx().package %>/<% ctx().deb %>
+      cmd: wget -O /tmp/st2-up/ubuntu/trusty/<% ctx().deb %> https://packagecloud.io/Coditation/<% ctx().source %>/ubuntu/pool/trusty/main/<% ctx().package.substring(0,1) %>/<% ctx().package %>/<% ctx().deb %>
       timeout: <% ctx().timeout %>
     next:
       - when: <% succeeded() %>
@@ -63,13 +63,13 @@ tasks:
   upload_trusty:
     action: core.local
     input:
-      cmd: LANG=en_US.utf8 PACKAGECLOUD_TOKEN=<% ctx().token %> package_cloud push StackStorm/<% ctx().repo %>/ubuntu/trusty /tmp/st2-up/ubuntu/trusty/<% ctx().deb %>
+      cmd: LANG=en_US.utf8 PACKAGECLOUD_TOKEN=<% ctx().token %> package_cloud push Coditation/<% ctx().repo %>/ubuntu/trusty /tmp/st2-up/ubuntu/trusty/<% ctx().deb %>
       timeout: <% ctx().timeout %>
 
   download_xenial:
     action: core.local
     input:
-      cmd: wget -O /tmp/st2-up/ubuntu/xenial/<% ctx().deb %> https://packagecloud.io/StackStorm/<% ctx().source %>/ubuntu/pool/xenial/main/<% ctx().package.substring(0,1) %>/<% ctx().package %>/<% ctx().deb %>
+      cmd: wget -O /tmp/st2-up/ubuntu/xenial/<% ctx().deb %> https://packagecloud.io/Coditation/<% ctx().source %>/ubuntu/pool/xenial/main/<% ctx().package.substring(0,1) %>/<% ctx().package %>/<% ctx().deb %>
       timeout: <% ctx().timeout %>
     next:
       - when: <% succeeded() %>
@@ -78,13 +78,13 @@ tasks:
   upload_xenial:
     action: core.local
     input:
-      cmd: LANG=en_US.utf8 PACKAGECLOUD_TOKEN=<% ctx().token %> package_cloud push StackStorm/<% ctx().repo %>/ubuntu/xenial /tmp/st2-up/ubuntu/xenial/<% ctx().deb %>
+      cmd: LANG=en_US.utf8 PACKAGECLOUD_TOKEN=<% ctx().token %> package_cloud push Coditation/<% ctx().repo %>/ubuntu/xenial /tmp/st2-up/ubuntu/xenial/<% ctx().deb %>
       timeout: <% ctx().timeout %>
 
   download_bionic:
     action: core.local
     input:
-      cmd: wget -O /tmp/st2-up/ubuntu/bionic/<% ctx().deb %> https://packagecloud.io/StackStorm/<% ctx().source %>/ubuntu/pool/bionic/main/<% ctx().package.substring(0,1) %>/<% ctx().package %>/<% ctx().deb %>
+      cmd: wget -O /tmp/st2-up/ubuntu/bionic/<% ctx().deb %> https://packagecloud.io/Coditation/<% ctx().source %>/ubuntu/pool/bionic/main/<% ctx().package.substring(0,1) %>/<% ctx().package %>/<% ctx().deb %>
       timeout: <% ctx().timeout %>
     next:
       - when: <% succeeded() %>
@@ -93,13 +93,13 @@ tasks:
   upload_bionic:
     action: core.local
     input:
-      cmd: LANG=en_US.utf8 PACKAGECLOUD_TOKEN=<% ctx().token %> package_cloud push StackStorm/<% ctx().repo %>/ubuntu/bionic /tmp/st2-up/ubuntu/bionic/<% ctx().deb %>
+      cmd: LANG=en_US.utf8 PACKAGECLOUD_TOKEN=<% ctx().token %> package_cloud push Coditation/<% ctx().repo %>/ubuntu/bionic /tmp/st2-up/ubuntu/bionic/<% ctx().deb %>
       timeout: <% ctx().timeout %>
 
   download_el6:
     action: core.local
     input:
-      cmd: wget -O /tmp/st2-up/el/6/<% ctx().rpm %> https://packagecloud.io/StackStorm/<% ctx().source %>/el/6/x86_64/<% ctx().rpm %>
+      cmd: wget -O /tmp/st2-up/el/6/<% ctx().rpm %> https://packagecloud.io/Coditation/<% ctx().source %>/el/6/x86_64/<% ctx().rpm %>
       timeout: <% ctx().timeout %>
     next:
       - when: <% succeeded() %>
@@ -108,13 +108,13 @@ tasks:
   upload_el6:
     action: core.local
     input:
-      cmd: LANG=en_US.utf8 PACKAGECLOUD_TOKEN=<% ctx().token %> package_cloud push StackStorm/<% ctx().repo %>/el/6 /tmp/st2-up/el/6/<% ctx().rpm %>
+      cmd: LANG=en_US.utf8 PACKAGECLOUD_TOKEN=<% ctx().token %> package_cloud push Coditation/<% ctx().repo %>/el/6 /tmp/st2-up/el/6/<% ctx().rpm %>
       timeout: <% ctx().timeout %>
 
   download_el7:
     action: core.local
     input:
-      cmd: wget -O /tmp/st2-up/el/7/<% ctx().rpm %> https://packagecloud.io/StackStorm/<% ctx().source %>/el/7/x86_64/<% ctx().rpm %>
+      cmd: wget -O /tmp/st2-up/el/7/<% ctx().rpm %> https://packagecloud.io/Coditation/<% ctx().source %>/el/7/x86_64/<% ctx().rpm %>
       timeout: <% ctx().timeout %>
     next:
       - when: <% succeeded() %>
@@ -123,5 +123,5 @@ tasks:
   upload_el7:
     action: core.local
     input:
-      cmd: LANG=en_US.utf8 PACKAGECLOUD_TOKEN=<% ctx().token %> package_cloud push StackStorm/<% ctx().repo %>/el/7 /tmp/st2-up/el/7/<% ctx().rpm %>
+      cmd: LANG=en_US.utf8 PACKAGECLOUD_TOKEN=<% ctx().token %> package_cloud push Coditation/<% ctx().repo %>/el/7 /tmp/st2-up/el/7/<% ctx().rpm %>
       timeout: <% ctx().timeout %>

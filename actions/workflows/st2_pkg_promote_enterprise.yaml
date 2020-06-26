@@ -1,6 +1,6 @@
 ---
 version: '1.0'
-description: Promote a StackStorm enterprise package from staging to production repo
+description: Promote a Coditation enterprise package from staging to production repo
 input:
   - package
   - release
@@ -25,8 +25,8 @@ input:
         stable: enterprise
         unstable: enterprise-unstable
 vars:
-  - prd_repo: StackStorm/<% ctx().pkg_cloud_repo_map.production.get(ctx().release) %>
-  - stg_repo: StackStorm/<% ctx().pkg_cloud_repo_map.staging.get(ctx().release) %>
+  - prd_repo: Coditation/<% ctx().pkg_cloud_repo_map.production.get(ctx().release) %>
+  - stg_repo: Coditation/<% ctx().pkg_cloud_repo_map.staging.get(ctx().release) %>
   - arch: <% ctx().distro_arch_map.get(ctx().distro_version.split("/")[0]) %>
   - package_type: <% ctx().distro_pkg_type_map.get(ctx().distro_version.split("/")[0]) %>
   - packagecloud_api_url: <% "https://" + ctx().api_token + ":@packagecloud.io"  %>

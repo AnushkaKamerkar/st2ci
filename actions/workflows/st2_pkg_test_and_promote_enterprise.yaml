@@ -18,7 +18,7 @@ input:
     - '#thunderdome'
     - '#opstown'
 vars:
-  - webui_base_url: https://st2cicd.uswest2.stackstorm.net
+  - webui_base_url: https://st2cicd.uswest2.coditation.net
 tasks:
   init:
     action: core.noop

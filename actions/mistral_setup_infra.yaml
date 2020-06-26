@@ -17,9 +17,9 @@ parameters:
       - fedora
   mis_repo_base:
     type: string
-    default: stackstorm
+    default: coditation
     enum:
-      - stackstorm
+      - coditation
       - openstack
   mis_repo_main:
     type: string
@@ -29,7 +29,7 @@ parameters:
     default: https://github.com/{{mis_repo_base}}/python-mistralclient.git
   mis_repo_action:
     type: string
-    default: https://github.com/StackStorm/st2mistral.git
+    default: https://github.com/Coditation/st2mistral.git
   mis_repo_branch:
     type: string
     default: master
@@ -50,16 +50,16 @@ parameters:
     default: mistral
   mis_db_user_pass:
     type: string
-    default: StackStorm
+    default: Coditation
   mis_db_root_pass:
     type: string
-    default: StackStorm
+    default: Coditation
   mis_api_port:
     type: integer
     default: 8989
   st2_repo:
     type: string
-    default: https://github.com/StackStorm/st2.git
+    default: https://github.com/Coditation/st2.git
   st2_repo_branch:
     type: string
     default: master
